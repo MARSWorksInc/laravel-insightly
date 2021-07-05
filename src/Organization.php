@@ -3,13 +3,13 @@
 
 namespace Marsworksinc\LaravelInsightly;
 
-
 class Organization
 {
     public function __construct(
         private int $id,
         private string $name,
-    ) { }
+    ) {
+    }
 
     /**
      * @return int
@@ -42,6 +42,4 @@ class Organization
     {
         $this->name = $name;
     }
-
-
 }

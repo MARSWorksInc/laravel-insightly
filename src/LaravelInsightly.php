@@ -11,7 +11,8 @@ class LaravelInsightly
         protected string $url,
         protected string $key,
         protected string $version,
-    ) { }
+    ) {
+    }
 
     /**
      * @return string

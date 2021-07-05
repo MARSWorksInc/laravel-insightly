@@ -3,7 +3,6 @@
 
 namespace Marsworksinc\LaravelInsightly;
 
-
 class Contact
 {
     public function __construct(
@@ -13,7 +12,8 @@ class Contact
         private ?string $email,
         private ?string $salutation = null,
         private ?int $organization = null,
-    ) { }
+    ) {
+    }
 
     /**
      * @return int|null
