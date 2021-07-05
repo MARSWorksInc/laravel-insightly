@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "marsworksinc/laravel-insightly",
+    "description": "Package to integrate with the Insightly CRM API",
     "keywords": [
-        ":vendor_name",
+        "MARSWorks Inc.",
         "laravel",
-        "package_slug"
+        "laravel-insightly"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/marsworksinc/laravel-insightly",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Sean O'Neill",
+            "email": "sean@marsworks.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Marsworksinc\\LaravelInsightly\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Marsworksinc\\LaravelInsightly\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Marsworksinc\\LaravelInsightly\\LaravelInsightlyServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "Insightly": "Marsworksinc\\LaravelInsightly\\LaravelInsightlyFacade"
             }
         }
     },

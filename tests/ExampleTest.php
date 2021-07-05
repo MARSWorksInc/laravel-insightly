@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace MarsworksInc\LaravelInsightly\Tests;
 
 class ExampleTest extends TestCase
 {
