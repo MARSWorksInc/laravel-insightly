@@ -4,15 +4,15 @@ return [
     /*
      * The URL to the Venngo API
      */
-    'url' => env('INSIGHTLY_API_URL'),
+    'url' => env('INSIGHTLY_API_URL', 'https://api.na1.insightly.com'),
 
     /*
      * The API Key for Venngo
      */
-    'key' => env('INSIGHTLY_API_KEY'),
+    'key' => env('INSIGHTLY_API_KEY', ''),
 
     /*
      * The API Key for Venngo
      */
-    'version' => env('INSIGHTLY_API_VERSION'),
+    'version' => env('INSIGHTLY_API_VERSION', 'v3.1'),
 ];
