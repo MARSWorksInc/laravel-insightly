@@ -88,6 +88,7 @@ class LaravelInsightly
                 lastName: $responseData['LAST_NAME'],
                 email: $responseData['EMAIL_ADDRESS'],
                 salutation: $responseData['SALUTATION'],
+                organization: $responseData['ORGANISATION_ID'],
             );
         }
 
