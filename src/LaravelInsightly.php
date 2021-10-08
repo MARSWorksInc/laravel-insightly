@@ -146,7 +146,7 @@ class LaravelInsightly
 
         if ($response->successful()) {
             $responseData = $response->json();
-
+ray($responseData);
             foreach ($responseData as $responseDatum) {
                 $contacts->push(
                     new Contact(
@@ -155,7 +155,7 @@ class LaravelInsightly
                         lastName: $responseDatum['LAST_NAME'],
                         email: $responseDatum['EMAIL_ADDRESS'],
                         salutation: $responseDatum['SALUTATION'],
-                        organization: $responseData['ORGANISATION_ID'],
+                        organization: $responseDatum['ORGANISATION_ID'],
                     )
                 );
             }
