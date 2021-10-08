@@ -155,6 +155,7 @@ class LaravelInsightly
                         lastName: $responseDatum['LAST_NAME'],
                         email: $responseDatum['EMAIL_ADDRESS'],
                         salutation: $responseDatum['SALUTATION'],
+                        organization: $responseData['ORGANISATION_ID'],
                     )
                 );
             }
