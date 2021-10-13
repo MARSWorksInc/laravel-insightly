@@ -146,7 +146,7 @@ class LaravelInsightly
 
         if ($response->successful()) {
             $responseData = $response->json();
-ray($responseData);
+
             foreach ($responseData as $responseDatum) {
                 $contacts->push(
                     new Contact(
