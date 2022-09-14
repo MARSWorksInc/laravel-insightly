@@ -111,11 +111,19 @@ class LaravelInsightly
         return null;
     }
 
-    public function searchOrganizations(string $search): Collection
+    /**
+     * Search Organizations in Insightly by the ORGANISATION_NAME field
+     *
+     * @param string $search Search text
+     * @param int $top How many records should this return
+     * @return Collection
+     */
+    public function searchOrganizations(string $search, int $top = 50): Collection
     {
         $organizations = collect();
 
-        $response = Http::withBasicAuth($this->getKey(), '')->get($this->getMethodUrl("Organisations/Search?field_name=ORGANISATION_NAME&field_value=$search"));
+        $response = Http::withBasicAuth($this->getKey(), '')
+            ->get($this->getMethodUrl("Organisations/Search?field_name=ORGANISATION_NAME&field_value=$search&top=$top"));
 
         if ($response->successful()) {
             $responseData = $response->json();
@@ -133,11 +141,19 @@ class LaravelInsightly
         return $organizations;
     }
 
-    public function searchContacts(string $field, string $search): Collection
+    /**
+     * Search Contacts in Insightly
+     *
+     * @param string $field What Insightly Field to search by
+     * @param string $search Search text
+     * @param int $top How many records should this return
+     * @return Collection
+     */
+    public function searchContacts(string $field, string $search, int $top = 50): Collection
     {
         $contacts = collect();
 
-        $query = "field_name=$field&field_value=$search&top=50";
+        $query = "field_name=$field&field_value=$search&top=$top";
 
         $response = Http::withBasicAuth($this->getKey(), '')
             ->get($this->getMethodUrl(
