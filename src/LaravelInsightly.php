@@ -90,7 +90,6 @@ class LaravelInsightly
                 salutation: $responseData['SALUTATION'],
                 organization: $responseData['ORGANISATION_ID'],
                 tags: $responseData['TAGS'],
-
             );
         }
 
