@@ -89,6 +89,8 @@ class LaravelInsightly
                 email: $responseData['EMAIL_ADDRESS'],
                 salutation: $responseData['SALUTATION'],
                 organization: $responseData['ORGANISATION_ID'],
+                tags: $responseData['TAGS'],
+
             );
         }
 
@@ -172,6 +174,7 @@ class LaravelInsightly
                         email: $responseDatum['EMAIL_ADDRESS'],
                         salutation: $responseDatum['SALUTATION'],
                         organization: $responseDatum['ORGANISATION_ID'],
+                        tags: $responseDatum['TAGS'],
                     )
                 );
             }

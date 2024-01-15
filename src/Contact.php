@@ -12,6 +12,7 @@ class Contact
         private ?string $email,
         private ?string $salutation = null,
         private ?int $organization = null,
+        private ?array $tags = [],
     ) {
     }
 

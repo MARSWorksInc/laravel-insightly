@@ -23,7 +23,9 @@ php artisan vendor:publish --provider="Marsworksinc\LaravelInsightly\LaravelInsi
 ## Usage
 
 ```php
-TODO
+Insightly::getContact("342660655"); // provide Insightly Contact ID
+
+Insightly::searchContacts("FIRST_NAME", "allan"); // Search first name field
 ```
 
 ## Testing

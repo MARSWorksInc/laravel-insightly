@@ -2,7 +2,7 @@
 // config for MarsworksInc/Laravel-Insightly
 return [
     /*
-     * The URL to the Venngo API
+     * The URL to the Insightly API
      */
     'url' => env('INSIGHTLY_API_URL', 'https://api.na1.insightly.com'),
 
